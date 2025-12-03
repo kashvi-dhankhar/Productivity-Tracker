@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Tracker - Summary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Productivity Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create-task.html">Create Task</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="summary.html">Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <h2>Productivity Summary</h2>
+                <div class="mb-3">
+                    <label for="summaryDate" class="form-label">Select Date:</label>
+                    <input type="date" class="form-control" id="summaryDate" onchange="loadSummary()">
+                    <button class="btn btn-primary mt-2" onclick="loadSummary()">Load Summary</button>
+                    <button class="btn btn-success mt-2" onclick="endDay()">End the Day</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="summaryContent">
+            <div class="text-center">
+                <p class="text-muted">Select a date and click "Load Summary" to view productivity statistics.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-toggle-container">
+        <button class="btn btn-sm theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+            <span id="themeIcon">🌙</span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/summary.js"></script>
+</body>
+</html>
+

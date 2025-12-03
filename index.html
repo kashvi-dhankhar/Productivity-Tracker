@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Tracker - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card shadow-lg">
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-center mb-4">Productivity Tracker</h2>
+                        <div id="loginForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username or Email</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <button class="btn btn-primary w-100 mb-3" onclick="login()">Login</button>
+                            <div class="text-center mb-3">
+                                <span class="text-muted">OR</span>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 mb-3" onclick="loginWithGoogle()">
+                                <i class="bi bi-google"></i> Sign in with Google
+                            </button>
+                            <div class="text-center">
+                                <p class="mb-0">Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+                            </div>
+                        </div>
+                        <div id="registerForm" style="display: none;">
+                            <div class="mb-3">
+                                <label for="regUsername" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="regUsername" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="regEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="regEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="regPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="regPassword" required>
+                            </div>
+                            <button class="btn btn-success w-100 mb-3" onclick="register()">Register</button>
+                            <div class="text-center">
+                                <p class="mb-0">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+                            </div>
+                        </div>
+                        <div id="alertMessage" class="alert mt-3" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="theme-toggle-container">
+        <button class="btn btn-sm theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+            <span id="themeIcon">🌙</span>
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
+
